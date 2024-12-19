@@ -53,7 +53,7 @@ public class Menu {
 				System.out.println("Apagar frutas\n\n");
 
 				break;
-		
+
 			default:
 				System.out.println("\nOpção Inválida!\n");
 				break;
