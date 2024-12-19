@@ -20,7 +20,7 @@ public class FrutaExotica extends Fruta {
 
 	@Override
 	public void mostrarDetalhes() {
-		System.out.println("Nome: " + getNome());
+		System.out.println("\nNome: " + getNome());
 		System.out.println("Quantidade: " + getQuantidade());
 		System.out.println("Preço: R$" + getPreco());
 		System.out.println("Origem: " + origem);
