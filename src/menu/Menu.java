@@ -1,5 +1,6 @@
 package menu;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 import fruta.controller.FrutaController;
@@ -76,12 +77,13 @@ public class Menu {
 					};
 					controller.cadastrar(fruta);
 				}
-
+				keyPress();
 				break;
 
 			case 2:
 				System.out.println("Listar todas as frutas\n\n");
 				controller.listarTodas();
+				keyPress();
 				break;
 
 			case 3:
@@ -105,7 +107,7 @@ public class Menu {
 					}
 				};
 				controller.atualizar(nome, frutaAtualizada);
-
+				keyPress();
 				break;
 
 			case 4:
@@ -114,13 +116,28 @@ public class Menu {
 				System.out.print("Digite o nome da fruta que deseja apagar: ");
 				nome = leia.next();
 				controller.deletar(nome);
-
+				keyPress();
 				break;
 
 			default:
 				System.out.println("\nOpção Inválida!\n");
+				keyPress();
 				break;
 			}
+		}
+	}
+
+	public static void keyPress() {
+
+		try {
+
+			System.out.println("\n\nPressione Enter para Continuar...");
+			System.in.read();
+
+		} catch (IOException e) {
+
+			System.out.println("Você pressionou uma tecla diferente de enter!");
+
 		}
 	}
 }
